@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test deck</title>
+  <title>Cockroft Gault calculator</title>
   <meta charset="utf-8">
-  <meta name="description" content="Test deck">
-  <meta name="author" content="">
+  <meta name="description" content="Cockroft Gault calculator">
+  <meta name="author" content="Leonardo Tozzi">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Test deck</h1>
-    <h2></h2>
-    <p><br/></p>
+    <h1>Cockroft Gault calculator</h1>
+    <h2>A handy way to calculate renal function</h2>
+    <p>Leonardo Tozzi<br/>MD</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,28 +43,84 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>The Cockroft Gault formula</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+    <p>My Shiny application calculates creatinin clearance based on the Cockroft Gault equation.</p>
+
+<p>Creatinin clearance is an important marker of renal function and a value &lt;75 ml/min suggests renal failure. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>How to use</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>As an input, you need to enter:</p>
+
+<ol>
+<li>Age in years</li>
+<li>Weight in kilos</li>
+<li>Plasma creatinin in mg/dl </li>
+<li>Sex of your patient</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Example - Male</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">plot(1:10, 1:10)
+    <p>Age=50</p>
+
+<p>Weight=75</p>
+
+<p>Plasma creatinin=1.3</p>
+
+<p>Sex=male</p>
+
+<pre><code class="r">age=50
+weight=75
+creatinine=1.3
+Clearance = (140-age)*weight/(72*creatinine)
+Clearance
 </code></pre>
 
-<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<pre><code>## [1] 72.12
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Example - Female</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Age=50</p>
+
+<p>Weight=75</p>
+
+<p>Plasma creatinin=1.3</p>
+
+<p>Sex=male</p>
+
+<pre><code class="r">age=50
+weight=75
+creatinine=1.3
+Clearance = 0.85*(140-age)*weight/(72*creatinine)
+Clearance
+</code></pre>
+
+<pre><code>## [1] 61.3
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,14 +132,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='The Cockroft Gault formula'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='How to use'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example - Male'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example - Female'>
+         4
       </a>
     </li>
   </ul>
